@@ -81,12 +81,30 @@ controller.on('rtm_close', function (bot) {
  */
 // BEGIN EDITING HERE!
 
-controller.on('bot_channel_join', function (bot, message) {
-    bot.reply(message, "I'm here!")
+controller.hears(['bisey', 'birsey', 'bişey', 'birşey'], 'direct_message,direct_mention,mention,ambient', function (bot, message) {	    
+bot.api.reactions.add({
+        timestamp: message.ts,
+        channel: message.channel,
+        name: 'alert',
+    }, function(err, res) {
+        if (err) {
+            bot.botkit.log('Failed to add emoji reaction :(', err);
+        }
+    });
+	bot.replyInThread(message, 'Birsey detected! Edit it before AK arrives.');
 });
 
-controller.hears('hello', 'direct_message', function (bot, message) {
-    bot.reply(message, 'Hello!');
+controller.hears(['hersey', 'herşey'], 'direct_message,direct_mention,mention,ambient', function (bot, message) {
+		    bot.api.reactions.add({
+        timestamp: message.ts,
+        channel: message.channel,
+        name: 'alert',
+    }, function(err, res) {
+        if (err) {
+            bot.botkit.log('Failed to add emoji reaction :(', err);
+        }
+    });
+	bot.replyInThread(message, 'Hersey detected! Edit it before AK arrives.');
 });
 
 

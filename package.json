@@ -1,5 +1,5 @@
 {
-  "name": "easy-peasy-bot",
+  "name": "grammer-police",
   "version": "1.0.0",
   "description": "The awesomest bot evar.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DEGoodmanWilson/easy-peasy-bot-app.git"
+    "url": "git+https://github.com/raphudo/easy-peasy-bot.git"
   },
   "keywords": [
     "slack",
@@ -18,14 +18,14 @@
   "author": "D.E. Goodman-Wilson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DEGoodmanWilson/easy-peasy-bot-app/issues"
+    "url": "https://github.com/raphudo/easy-peasy-bot/issues"
   },
-  "homepage": "https://github.com/DEGoodmanWilson/easy-peasy-bot-app#readme",
+  "homepage": "https://github.com/raphudo/easy-peasy-bot-app#readme",
   "engines": {
     "node": "5.1.1"
   },
   "dependencies": {
-    "botkit": "0.2.2",
+    "botkit": "^0.6.20",
     "botkit-storage-mongo": "^1.0.2",
     "mongodb": "^1.4.39"
   }
